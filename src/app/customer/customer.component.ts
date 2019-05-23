@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { Customer } from '../classes/customer';
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -9,7 +8,7 @@ import { Customer } from '../classes/customer';
 export class CustomerComponent implements OnInit {
 
   constructor() { }
-  customerForm: FormGroup;
+
   ngOnInit() {
   }
 

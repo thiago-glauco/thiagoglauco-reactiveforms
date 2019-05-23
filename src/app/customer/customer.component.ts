@@ -10,10 +10,16 @@ import { Customer } from '../classes/customer';
 export class CustomerComponent implements OnInit {
   
   formCustomer = new FormGroup({
-    name: new FormControl(''),
-    address1: new FormControl(''),
-    address2: new FormControl(''),
+    firstname: new FormControl(''),
+    lastname: new FormControl(''),
     email: new FormControl(''),
+    address: new FormGroup({
+      street: new FormControl(''),
+      cep: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl('')
+    })
+    
   });
   
 
@@ -23,7 +29,7 @@ export class CustomerComponent implements OnInit {
   }
 onSubmit() {
   // TODO: Use EventEmitter with form value
-  console.warn(this.formCustomer.value);
+  console.dir(this.formCustomer);
 }
 
 }

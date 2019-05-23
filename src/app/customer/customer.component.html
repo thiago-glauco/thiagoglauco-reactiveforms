@@ -5,25 +5,41 @@ customer works!
   <mat-form-field>
     <mat-label>Name</mat-label>
     <input matInput type="text"
-      formControlName="name">
+      formControlName="firstname">
   </mat-form-field>
   <mat-form-field>
-    <mat-label>address1</mat-label>
+    <mat-label>Last Name</mat-label>
     <input matInput type="text"
-      formControlName="address1">
+      formControlName="lastname">
   </mat-form-field>
   <mat-form-field>
-    <mat-label>address2</mat-label>
-    <input matInput type="text"
-      formControlName="address2">
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>address2</mat-label>
-    <input matInput type="text"
+    <mat-label>Email</mat-label>
+    <input matInput type="email"
       formControlName="email">
   </mat-form-field>
+  <div formGroupName="address">
+    <mat-form-field>
+      <mat-label>Street</mat-label>
+      <input matInput type="text"
+        formControlName="street">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>CEP</mat-label>
+      <input matInput type="text"
+        formControlName="cep">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>City</mat-label>
+      <input matInput type="text"
+        formControlName="city">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>State</mat-label>
+      <input matInput type="text"
+        formControlName="state">
+    </mat-form-field>
+  </div>
   <button mat-raised-button type="submit"><mat-icon>save</mat-icon>Save</button>
-
-  <button mat-raised-button (click)="updateName()">Update Name</button>
-
+  <button mat-raised-button >Update Name</button>
+  <p matLine>{{formCustomer.value | json}}</p>
 </form>

@@ -1,7 +1,18 @@
 <p>
 customer works!
 </p>
-<form (ngSubmit)="onSubmit()" [formGroup]="formCustomer">
+<mat-card>
+  <form (ngSubmit)="onSubmit()" [formGroup]="formCustomer">
+  <mat-card-title-group>
+    <mat-card-title>
+      <p matLine>Register</p>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <p matLine>Please, keep your data updated!</p>
+    </mat-card-subtitle>
+  </mat-card-title-group>
+<mat-card-content>
+
   <mat-form-field>
     <mat-label>Name</mat-label>
     <input matInput type="text"
@@ -43,4 +54,7 @@ customer works!
   <button mat-raised-button >Update Name</button>
   <p matLine>{{formCustomer.value | json}}</p>
   <p matLine>{{formCustomer.status}}</p>
-</form>
+  </mat-card-content>
+  </form>
+</mat-card>
+

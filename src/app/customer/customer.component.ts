@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Customer } from '../classes/customer';
 
 @Component({
@@ -9,11 +9,21 @@ import { Customer } from '../classes/customer';
 })
 export class CustomerComponent implements OnInit {
   
+  formCustomer = new FormGroup({
+    name: new FormControl(''),
+    address1: new FormControl(''),
+    address2: new FormControl(''),
+    email: new FormControl(''),
+  });
+  
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  name = new FormControl('');
+onSubmit() {
+  // TODO: Use EventEmitter with form value
+  console.warn(this.formCustomer.value);
+}
 
 }

@@ -1,10 +1,29 @@
 <p>
 customer works!
 </p>
-<form>
+<form (ngSubmit)="onSubmit()" [formGroup]="formCustomer">
   <mat-form-field>
     <mat-label>Name</mat-label>
     <input matInput type="text"
-      [formControl]="name">
+      formControlName="name">
   </mat-form-field>
+  <mat-form-field>
+    <mat-label>address1</mat-label>
+    <input matInput type="text"
+      formControlName="address1">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>address2</mat-label>
+    <input matInput type="text"
+      formControlName="address2">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>address2</mat-label>
+    <input matInput type="text"
+      formControlName="email">
+  </mat-form-field>
+  <button mat-raised-button type="submit"><mat-icon>save</mat-icon>Save</button>
+
+  <button mat-raised-button (click)="updateName()">Update Name</button>
+
 </form>

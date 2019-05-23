@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -21,7 +22,8 @@ import { CustomerComponent } from './customer/customer.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   declarations: [ AppComponent, HelloComponent, CustomerComponent ],
   bootstrap:    [ AppComponent ]

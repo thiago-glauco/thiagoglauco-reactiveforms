@@ -10,9 +10,9 @@ import { Customer } from '../classes/customer';
 export class CustomerComponent implements OnInit {
   
   private formCustomer: FormGroup = this.fb.group({
-    firstname: ['', Validators.required],
+    firstname: ['', [Validators.required, Validators.minLength(3)]],
     lastname: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required, , Validators.minLength(3), Validators.email]],
     address: this.fb.group({
       street: [''],
       cep: [''],
